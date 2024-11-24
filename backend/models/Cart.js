@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const cartItemSchema = new mongoose.Schema({
   Cake_Id: {

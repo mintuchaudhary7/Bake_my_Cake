@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 orderSchema.pre("save", function (next) {
   this.Total_Price = this.Items.reduce(
