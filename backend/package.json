@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is a simple online cake store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mintu Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.8.2"
+  }
+}
