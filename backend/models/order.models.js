@@ -9,16 +9,16 @@ orderSchema.pre("save", function (next) {
 });
 
 const orderItemSchema = new mongoose.Schema({
-  Cake_Id: {
+  cake_Id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Cake", // Reference to the Cake model
     required: true,
   },
-  Price: {
+  price: {
     type: Number,
     required: true,
   },
-  Quantity: {
+  quantity: {
     type: Number,
     required: true,
   },
@@ -26,13 +26,13 @@ const orderItemSchema = new mongoose.Schema({
 
 const orderSchema = new mongoose.Schema(
   {
-    User_Id: {
+    user_Id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User", // Reference to the User model
       required: true,
     },
 
-    Items: {
+    items: {
       type: [orderItemSchema],
       validate: {
         validator: function (items) {
@@ -41,32 +41,32 @@ const orderSchema = new mongoose.Schema(
         message: "Order must contain at least one item.",
       },
     },
-    Total_Price: {
+    total_Price: {
       type: Number,
       required: true,
     },
 
-    Status: {
+    status: {
       type: String,
       enum: ["Pending", "Delivered"],
     },
 
-    Address: {
+    address: {
       type: String,
       required: true,
     },
 
-    Payment_Status: {
+    payment_Status: {
       type: String,
       enum: ["Pending", "Paid", "Failed"],
       default: "Pending",
     },
 
-    Delivery_Date: {
+    delivery_Date: {
       type: Date,
       required: true,
     },
-    Special_Message: {
+    special_Message: {
       type: String,
     },
   },

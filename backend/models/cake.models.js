@@ -1,38 +1,38 @@
 const mongoose = require('mongoose');
 
 const priceSchema = new mongoose.Schema({
-  Size: {
+  size: {
     type: String,
     enum: ["Small", "Medium", "Large", "Extra Large"], // Define valid sizes
     required: true,
   },
-  Price: {
+  price: {
     type: Number,
     required: true,
   },
 })
 
 const cakeSchema = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
     required: true,
   },
-  Flavour: {
+  flavour: {
     type: String,
     required: true,
   },
-  Description: {
+  description: {
     type: String,
     required: true,
   },
-  Price: {
+  price: {
     type: [priceSchema]
   },
-  Image_Url: {
+  image_Url: {
     type: String,
     required: true,
   },
-  IsAvailable:{
+  isAvailable:{
     type: Boolean,
     default: true
   }

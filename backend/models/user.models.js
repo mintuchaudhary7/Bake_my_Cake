@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
     required: true,
   },
-  Email: {
+  email: {
     type: String,
     required: true,
   },
-  Password: {
+  password: {
     type: String,
     required: true,
   },
-  Role:{
+  role:{
     type: String,
     enum: ["Admin", "Customer"],
     default: "Customer",
   },
-  Address: {
+  address: {
     type: String,
     required: true
   },
-  Order_History: [
+  order_History: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Order", // Reference to the Order schema
