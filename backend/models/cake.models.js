@@ -38,4 +38,4 @@ const cakeSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model("Cake", cakeSchema);
+module.exports = mongoose.model("Cake", cakeSchema);
