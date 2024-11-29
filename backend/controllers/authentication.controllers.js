@@ -53,3 +53,13 @@ exports.signup = async (req, res) => {
     });
   }
 };
+
+
+exports.login = async (req, res) =>{
+  try{
+
+  }
+  catch(error){
+    
+  }
+}
