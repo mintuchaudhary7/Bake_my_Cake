@@ -19,6 +19,7 @@ const Login = () => {
       });
       const token = response.data.token;
       localStorage.setItem("token", token); // Store token in localStorage
+      console.log(response);
       toast.success("Login successful! 🎉"); // Show success toast
       setEmail("");
       setPassword("");
