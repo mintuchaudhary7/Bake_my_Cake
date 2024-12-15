@@ -1,14 +1,17 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
-      <Signup></Signup>
-      <Login></Login>
-    </div>
-    
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
